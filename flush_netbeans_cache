@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo Flushing Netbeans cache...
+cd $NETBEANS_HOME/$NETBEANS_VERSION/var/cache/index
+if [ -f "segments" ]
+then
+   rm -rf *
+   echo Netbeans cache has been flushed.
+fi
