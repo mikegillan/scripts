@@ -1,0 +1,17 @@
+# ------------------------------------------
+# ELM Environment Variables
+# ------------------------------------------
+
+# Root of ELM's development directory - under this you should find /trunk, /branches, and /tag
+export ELM_ROOT=/n8id/elm
+
+# Current development branch (e.g. 'trunk' or 'branches/<branchname>' without the quotes)
+export ELM_BRANCH=trunk
+
+# Used by aliases and the like for shortcuts to our current elm development working location
+export ELM_DEV=${ELM_ROOT}/${ELM_BRANCH}
+
+export CLIENT_DEV=/n8id/clients/loblaw/elm/trunk
+
+export NETBEANS_HOME=/usr/local/netbeans_home
+export NETBEANS_VERSION=7.1.2
