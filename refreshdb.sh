@@ -11,7 +11,7 @@ FILE_NAME="dbcreate_elm_`date +"%Y%m%d"`.sql"
 echo "Removing old database creation scripts"
 rm -f /tmp/dbcreate_*
 
-echo "Compiling new database creation script as /tmp/$FILE_NAME"
+echo "Compiling new database creation script in $WORKSPACE_PATH as /tmp/$FILE_NAME"
 $WORKSPACE_PATH/libraries/scripts/src/main/resources/compileELMDB $WORKSPACE_PATH /tmp/$FILE_NAME $1
 psql -U postgres -h localhost -d elm -f /tmp/$FILE_NAME -v ON_ERROR_STOP=1
 

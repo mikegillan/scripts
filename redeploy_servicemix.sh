@@ -1,15 +1,26 @@
 #!/bin/bash
+SERVICEMIX=apache-servicemix-4.4.1-fuse-06-03
 
 cd /usr/local
 read -p "Press enter to redeploy ServiceMix (CTRL-C to abort)  "
-rm -rf apache-servicemix-4.4.1-fuse-03-06
-tar xvf apache-servicemix-4.4.1-fuse-03-06.configured.tar.gz -z
+rm -rf $SERVICEMIX
+tar xvf $SERVICEMIX.configured.tar.gz -z
 
 echo
-echo "features:addUrl file:/n8id/elm/branches/3196/release/core_packager/src/main/resources/core-dependencies.xml"
-echo "features:addUrl file:/n8id/elm/branches/3196/release/dev_packager/src/main/resources/dev-dependencies.xml"
-echo "features:install elm-core-install"
+echo "---Core install---"
+echo "features:addUrl file:$ELM_DEV/release/core_packager/src/main/resources/core-dependencies.xml"
+echo "features:addUrl file:$ELM_DEV/release/dev_packager/src/main/resources/dev-dependencies.xml"
+echo "features:install elm-dependencies"
 echo "features:install elm-dev-install"
+echo
+echo "---Loblaw install---"
+echo "features:addUrl file:$ELM_DEV/release/core_packager/src/main/resources/core-dependencies.xml"
+echo "features:addUrl file:$ELM_DEV/release/dev_packager/src/main/resources/dev-dependencies.xml"
+echo "features:addUrl file:$CLIENT_DEV/release/loblaw_packager/src/main/resources/loblaw-dependencies.xml"
+echo "features:install elm-dependencies"
+echo "features:install elm-dev-install"
+echo "(Uninstall the core customization helper)"
+echo "features:install elm-loblaw"
 echo
 
 cd /usr/local/servicemix/bin

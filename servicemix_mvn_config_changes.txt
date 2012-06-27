@@ -1,0 +1,3 @@
+    http://nexus.n8id.com/content/repositories/thirdparty, \
+    http://nexus.n8id.com/content/repositories/releases
+
