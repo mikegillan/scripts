@@ -18,7 +18,7 @@ echo "features:addUrl file:$ELM_DEV/release/core_packager/src/main/resources/cor
 echo "features:addUrl file:$ELM_DEV/release/dev_packager/src/main/resources/dev-dependencies.xml"
 echo "features:addUrl file:$CLIENT_DEV/release/loblaw_packager/src/main/resources/loblaw-dependencies.xml"
 echo "features:install elm-dependencies"
-echo "features:install elm-dev-install"
+echo "features:install elm-core-install"
 echo "(Uninstall the core customization helper)"
 echo "features:install elm-loblaw"
 echo
