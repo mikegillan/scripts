@@ -7,6 +7,11 @@ rm -rf $SERVICEMIX
 tar xvf $SERVICEMIX.configured.tar.gz -z
 
 echo
+echo "---KAR Pagager Upgrade--"
+echo "la | grep \"(\.kar)\""
+echo "(Uninstall the returned bundle number)"
+echo "install -s mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.kar/2.2.7"
+echo
 echo "---Core install---"
 echo "features:addUrl file:$ELM_DEV/release/core_packager/src/main/resources/core-dependencies.xml"
 echo "features:addUrl file:$ELM_DEV/release/dev_packager/src/main/resources/dev-dependencies.xml"

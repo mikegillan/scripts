@@ -14,4 +14,4 @@ export ELM_DEV=${ELM_ROOT}/${ELM_BRANCH}
 export CLIENT_DEV=/n8id/clients/loblaw/elm/trunk
 
 export NETBEANS_HOME=/usr/local/netbeans_home
-export NETBEANS_VERSION=7.1.2
+export NETBEANS_VERSION=7.2rc1
